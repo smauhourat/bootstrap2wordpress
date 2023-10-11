@@ -26,36 +26,6 @@
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-md-6">
-
-          <!-- <nav class="main-menu">
-            <ul class="top-menu d-flex flex-row navigation top-menu justify-content-end list-unstyled">
-              <li class="menu-item"><a href="index.html">Home</a></li>
-
-              <li class="menu-item menu-item-has-children"><a href="index.html">Blog</a>
-
-                <ul class="sub-menu">
-                  <li class="menu-item"><a href="single.html">Single post</a></li>
-                  <li class="menu-item"><a href="widgets.html">Widgets</a></li>
-                  <li class="menu-item"><a href="index.html">Contact</a></li>
-
-                  <li class="menu-item menu-item-has-children"><a href="index.html">Blog</a>
-                    <ul class="sub-menu">
-                      <li class="menu-item"><a href="index.html">Blog</a></li>
-                      <li class="menu-item"><a href="index.html">FAQ</a></li>
-                      <li class="menu-item"><a href="index.html">Contact</a></li>
-                    </ul>
-                  </li>
-
-                </ul>
-
-              </li>
-
-              <li class="menu-item"><a href="widgets.html">Widgets</a></li>
-              <li class="menu-item"><a href="index.html">Contact</a></li>
-              <li class="menu-item special-menu"><a href="index.html">Join</a></li>
-            </ul>
-          </nav> -->
-
           <?php
             wp_nav_menu( array(
                 'theme_location'    => 'primary', // as registered in functions.php

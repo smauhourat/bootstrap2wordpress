@@ -15,7 +15,7 @@
         <div class="row">
           <div class="col-md-8 offset-md-2 overflow-hidden">
             <p class="sub-title">Join the course</p>
-            <h2>Bootstrap to WordPress 2.0</h2>
+            <h2>Bootstrap to WordPress 2.01</h2>
             <p>Learn how to design and build custom, beautiful & responsive WordPress websites and themes for beginners in 2021 and beyond!</p>
             <a href="#" class="btn btn-primary">Join now -&gt;</a>
           </div>
