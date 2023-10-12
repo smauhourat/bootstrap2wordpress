@@ -49,3 +49,32 @@ new \Kirki\Field\Code(
 		],
 	]
 );
+
+// Section Footer
+new \Kirki\Section(
+	'b2w_footer_bar',
+	[
+		'title'       => esc_html__( 'Footer', 'bootstrap2wordpress' ),
+		'description' => esc_html__( 'This is Footer section.', 'bootstrap2wordpress' ),
+		'panel'       => 'b2w_theme_option_panel',
+		'priority'    => 160,
+	]
+);
+
+/* Controls */
+new \Kirki\Field\Textarea(
+	[
+		'settings'    => 'footer_copyright',
+		'label'       => esc_html__( 'Footer copyright text', 'bootstrap2wordpress' ),
+		'section'     => 'b2w_footer_bar',
+		'default'     => esc_html__( 'Adhentux.com', 'bootstrap2wordpress' ),
+        'partial_refresh' => array(
+            'footer_copyright'  => array(
+                'selector' => 'footer .copyright p',
+                'render_callback' => function () {
+                    return get_theme_mod('footer_copyright');
+                }
+            )
+        )
+	]
+);
