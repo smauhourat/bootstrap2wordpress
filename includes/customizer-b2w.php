@@ -78,3 +78,25 @@ new \Kirki\Field\Textarea(
         )
 	]
 );
+
+// Section Pre Footer
+new \Kirki\Section(
+	'footer_calltoaction_section',
+	[
+		'title'       => esc_html__( 'Call to Action', 'bootstrap2wordpress' ),
+		'description' => esc_html__( 'This is the Call to Action Card, in the Pre-Footer Section', 'bootstrap2wordpress' ),
+		'panel'       => 'b2w_theme_option_panel',
+		'priority'    => 160,
+	]
+);
+
+
+new \Kirki\Field\Text(
+	[
+		'settings' => 'pre_footer_title',
+		'label'    => esc_html__( 'Text Control', 'bootstrap2wordpress' ),
+		'section'  => 'footer_calltoaction_section',
+		'default'  => esc_html__( 'This is a default value', 'bootstrap2wordpress' ),
+		'priority' => 10,
+	]
+);
