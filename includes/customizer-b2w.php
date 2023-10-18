@@ -91,12 +91,99 @@ new \Kirki\Section(
 );
 
 
+new \Kirki\Field\Checkbox_Switch(
+	[
+		'settings'    => 'footer_calltoaction_visibility',
+		'label'       => esc_html__( 'Call to Action section', 'bootstrap2wordpress' ),
+		'description' => esc_html__( 'Toggle this secion to on or off', 'bootstrap2wordpress' ),
+		'section'     => 'footer_calltoaction_section',
+		'default'     => 'on',
+		'choices'     => [
+			'on'  => esc_html__( 'Enable', 'bootstrap2wordpress' ),
+			'off' => esc_html__( 'Disable', 'bootstrap2wordpress' ),
+		],
+	]
+);
+
 new \Kirki\Field\Text(
 	[
-		'settings' => 'pre_footer_title',
-		'label'    => esc_html__( 'Text Control', 'bootstrap2wordpress' ),
+		'settings' => 'footer_subheading',
+		'label'    => esc_html__( 'Sub Heading', 'bootstrap2wordpress' ),
+		'tooltip'    => esc_html__( 'Call to Action Section Sub Heading Text', 'bootstrap2wordpress' ),
 		'section'  => 'footer_calltoaction_section',
-		'default'  => esc_html__( 'This is a default value', 'bootstrap2wordpress' ),
+		'default'  => esc_html__( 'Join the course', 'bootstrap2wordpress' ),
+        'partial_refresh' => array(
+            'footer_subheading'  => array(
+                'selector' => '.footer-calltoaction p.sub-title',
+                'render_callback' => function () {
+                    return get_theme_mod('footer_subheading');
+                }
+            )
+        ),
+		'priority' => 10,
+	]
+);
+
+new \Kirki\Field\Text(
+	[
+		'settings' => 'footer_heading',
+		'label'    => esc_html__( 'Sub Heading', 'bootstrap2wordpress' ),
+		'tooltip'    => esc_html__( 'Call to Action Section Heading Text', 'bootstrap2wordpress' ),
+		'section'  => 'footer_calltoaction_section',
+		'default'  => esc_html__( 'Bootstrap to WordPress 2.0', 'bootstrap2wordpress' ),
+        'partial_refresh' => array(
+            'footer_heading'  => array(
+                'selector' => '.footer-calltoaction h2',
+                'render_callback' => function () {
+                    return get_theme_mod('footer_heading');
+                }
+            )
+        ),
+		'priority' => 10,
+	]
+);
+
+new \Kirki\Field\Textarea(
+	[
+		'settings'    => 'footer_calltoaction_desc',
+		'label'       => esc_html__( 'Description', 'bootstrap2wordpress' ),
+		'section'     => 'footer_calltoaction_section',
+		'default'     => esc_html__( 'Learn how to design and build custom, beautiful & responsive WordPress websites and themes for beginners in 2021 and beyond!', 'bootstrap2wordpress' ),
+        'partial_refresh' => array(
+            'footer_calltoaction_desc'  => array(
+                'selector' => '.footer-calltoaction p.fcta-desc',
+                'render_callback' => function () {
+                    return get_theme_mod('footer_calltoaction_desc');
+                }
+            )
+        )
+	]
+);
+
+new \Kirki\Field\Text(
+	[
+		'settings' => 'footer_calltoaction_button',
+		'label'    => esc_html__( 'Button Text', 'bootstrap2wordpress' ),
+		'section'  => 'footer_calltoaction_section',
+		'default'  => esc_html__( 'Join now ->', 'bootstrap2wordpress' ),
+        'partial_refresh' => array(
+            'footer_calltoaction_button'  => array(
+                'selector' => '.footer-calltoaction a.btn',
+                'render_callback' => function () {
+                    return get_theme_mod('footer_calltoaction_button');
+                }
+            )
+        ),
+		'priority' => 10,
+	]
+);
+
+new \Kirki\Field\URL(
+	[
+		'settings' => 'footer_cta_link',
+		'label'    => esc_html__( 'URL Control', 'bootstrap2wordpress' ),
+		'section'  => 'footer_calltoaction_section',
+		'default'  => '#',
 		'priority' => 10,
 	]
 );
